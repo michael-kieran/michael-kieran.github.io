@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Michael Kieran | Product Marketing for AI Infrastructure</title>
-<meta name="description" content="Michael Kieran leads messaging and go-to-market for IBM Storage Scale, focused on object storage, inference, and KV cache for AI factories. Writing, enablement, talks, and astrophotography.">
+<meta name="description" content="Michael Kieran leads messaging and go-to-market for IBM Storage Scale, focused on object storage, inference, and KV cache for AI factories. Emmy-winning science writer, author, and astrophotographer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
@@ -63,7 +63,16 @@
   .card h3{font-size:19px;margin:8px 0 10px;line-height:1.3}
   .card p{color:var(--muted);font-size:15px;flex:1}
   .card a.more{margin-top:16px;font-weight:600;font-size:14px}
+  .credit{font-size:13px;color:var(--muted);font-style:italic;margin-top:12px}
   .about p{font-size:17px;max-width:800px;margin-bottom:16px;color:#cdd3e1}
+
+  /* Video cards */
+  .video{width:100%;aspect-ratio:16/9;border:0;border-radius:8px;margin-bottom:16px;background:#000}
+
+  /* Book cover */
+  .cover{width:100%;aspect-ratio:3/4;max-width:180px;border:1px dashed var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;
+    color:var(--muted);font-size:13px;text-align:center;padding:12px;margin-bottom:16px;background:var(--bg2)}
+  img.cover{border:0;padding:0;object-fit:cover}
 
   .timeline{margin-top:30px;display:grid;gap:12px}
   .job{display:grid;grid-template-columns:160px 1fr;gap:20px;padding:14px 0;border-bottom:1px dashed var(--line)}
@@ -71,17 +80,15 @@
   .job b{display:block} .job span{color:var(--muted);font-size:15px}
   @media(max-width:600px){.job{grid-template-columns:1fr;gap:4px}}
 
-  .astro{display:grid;gap:48px}
-  .astro-item{background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-  .astro-item img{width:100%;display:block;cursor:zoom-in;background:#000}
-  .astro-body{display:grid;grid-template-columns:1.7fr 1fr;gap:36px;padding:32px}
-  .astro-body h3{font-size:24px;margin-bottom:14px}
-  .astro-body p{font-family:var(--serif);font-size:17px;color:#cdd3e1;margin-bottom:14px}
-  .specs{border-left:1px solid var(--line);padding-left:28px;font-size:14px}
-  .specs dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px}
-  .specs dt{color:var(--muted)} .specs dd{color:var(--text)}
-  .copy{margin-top:24px;font-size:12px;color:var(--muted);font-style:italic}
-  @media(max-width:800px){.astro-body{grid-template-columns:1fr}.specs{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:20px}}
+  /* Astrophotography: image and text side by side, alternating */
+  .astro{display:grid;gap:36px}
+  .astro-item{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .astro-item:nth-child(even) .astro-img{order:2}
+  .astro-img img{width:100%;display:block;border-radius:8px;cursor:zoom-in;background:#000}
+  .astro-text h3{font-size:22px;margin-bottom:12px}
+  .astro-text p{font-family:var(--serif);font-size:16px;color:#cdd3e1;margin-bottom:12px}
+  .copy{margin-top:8px;font-size:12px;color:var(--muted);font-style:italic}
+  @media(max-width:800px){.astro-item{grid-template-columns:1fr}.astro-item:nth-child(even) .astro-img{order:0}}
 
   #lb{position:fixed;inset:0;background:#000e;display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
   #lb img{max-width:95vw;max-height:95vh}
@@ -116,7 +123,7 @@
     <div>
       <div class="eyebrow">Product Marketing · AI Infrastructure · Partner GTM</div>
       <h1>Marketing the <span>storage and memory layer</span> of the AI stack.</h1>
-      <p class="lede">High-performance object storage, GPU-accelerated inference, and KV cache for AI factories. Two decades turning complex enterprise infrastructure into stories that move buyers, partners, and analysts — now leading messaging and GTM for IBM Storage Scale and the IBM Storage–NVIDIA marketing relationship.</p>
+      <p class="lede">High-performance object storage, GPU-accelerated inference, and KV cache for AI factories. A career that started in science journalism and now centers on making complex infrastructure make sense — leading messaging and GTM for IBM Storage Scale and the IBM Storage–NVIDIA marketing relationship.</p>
       <div class="meta">Product Marketing at IBM · San Francisco Bay Area</div>
       <div class="btns">
         <a class="btn primary" href="https://www.linkedin.com/in/michaelkieran/">LinkedIn</a>
@@ -125,38 +132,39 @@
         <a class="btn" href="Assets/Michael_Kieran_Resume.pdf">Download résumé</a> -->
       </div>
     </div>
-    <img class="headshot" src="Assets/michael-kieran.jpg" alt="Michael Kieran">
+    <img class="headshot" src="Assets/Mike%20Kieran%20Profile%20Photo%20Cropped.jpg" alt="Michael Kieran">
   </div>
 </header>
 
 <!-- ============ BIG NUMBERS ============ -->
 <div class="wrap" style="padding-bottom:70px">
   <div class="stats">
-    <div class="stat"><b>20+ yrs</b><span>Marketing enterprise infrastructure</span></div>
+    <div class="stat"><b>Emmy</b><span>Award for science &amp; technology writing for educational television</span></div>
+    <div class="stat"><b>4 books</b><span>On digital color, including Photoshop color correction</span></div>
     <div class="stat"><b>400%</b><span>Corporate blog page-view growth in 24 months (Nimble Storage)</span></div>
     <div class="stat"><b>0 → 20K+</b><span>Monthly social engagements, built from scratch</span></div>
-    <div class="stat"><b>$1.1B</b><span>HPE acquisition of Nimble — led social strategy in the run-up</span></div>
   </div>
-  <!-- TODO: swap in IBM-era metrics (pipeline, launch results, analyst wins) when available -->
+  <!-- TODO: consider swapping in an IBM-era metric (pipeline, launch results, analyst wins) -->
 </div>
 
 <!-- ============ ABOUT ============ -->
 <section id="about" class="about">
   <div class="wrap">
     <div class="label">About</div>
-    <h2>A physics grad who became an infrastructure storyteller.</h2>
-    <p>I studied physics and astronomy at the University of Toronto, then spent two decades marketing enterprise infrastructure — including years on the technical side as a technical marketing engineer at NetApp, writing the content that helped buyers, sellers, SEs, and channel partners understand storage area networks. That grounding still shapes how I work: I don't message a product until I understand how it actually behaves.</p>
-    <p>Today I lead messaging and go-to-market for IBM Storage Scale, one of the world's leading file and object storage platforms for HPC and AI workloads, as part of the IBM Fusion AI team. I own the marketing relationship between IBM Storage and NVIDIA, and I work with IBM Storage CTO Vincent Hsu on thought leadership around KV cache and inference memory — positioning KV cache as AI-native infrastructure.</p>
-    <p>What I enjoy most is translating complex technology into stories that resonate — whether the audience is a CIO, a channel partner, an industry analyst, or someone looking at a photo of a nebula for the first time.</p>
+    <h2>A science writer who became an AI-infrastructure storyteller.</h2>
+    <p>I started my career as a science and technology reporter at The Globe and Mail in Toronto, after studying physics and astronomy at the University of Toronto. I went on to win an Emmy for science and technology writing for educational television, and wrote four books on digital color. Explaining hard things clearly has been the through-line ever since.</p>
+    <p>That carried me into enterprise infrastructure — including years on the technical side as a technical marketing engineer at NetApp, writing the content that helped buyers, sellers, SEs, and channel partners understand storage area networks. I don't message a product until I understand how it actually behaves.</p>
+    <p>Today I lead messaging and go-to-market for IBM Storage Scale, one of the world's leading file and object storage platforms for HPC and AI workloads, as part of the IBM Fusion AI team. I own the marketing relationship between IBM Storage and NVIDIA, and I'm the writing partner to IBM Storage CTO Vincent Hsu on KV cache and inference memory — positioning KV cache as AI-native infrastructure.</p>
 
     <div class="timeline">
       <div class="job"><div class="when">2023 – Present</div><div><b>IBM — Global Marketing Manager, Storage for Data &amp; AI</b><span>Lead all messaging and GTM for IBM Storage Scale; own the IBM Storage–NVIDIA marketing relationship.</span></div></div>
       <div class="job"><div class="when">2022 – 2023</div><div><b>IBM — Senior Marketing Manager, Data Resilience</b><span>Data protection software, flash, tape, and storage-as-a-service. Launched the IBM Diamondback tape system.</span></div></div>
       <div class="job"><div class="when">2020 – 2021</div><div><b>Pure Storage — Senior Product Marketing Manager</b><span>Messaging guides, launch collateral, and content production for multiple launches.</span></div></div>
       <div class="job"><div class="when">2017 – 2020</div><div><b>NetApp — Senior Technical Marketing Engineer</b><span>SAN content for buyers, sales, SEs, and channel partners; created the NVMe Modern SAN Primer.</span></div></div>
-      <div class="job"><div class="when">2012 – 2016</div><div><b>Nimble Storage — Marketing Director; Sr. Manager &amp; Manager, Social Marketing</b><span>Built social from zero to 20K+ monthly engagements; grew the corporate blog 400%; placed bylines in TechTarget, CIO, DataCenterKnowledge.</span></div></div>
+      <div class="job"><div class="when">2012 – 2016</div><div><b>Nimble Storage — Marketing Director; Sr. Manager &amp; Manager, Social Marketing</b><span>Built social from zero to 20K+ monthly engagements; grew the corporate blog 400%; led social strategy in the run-up to HPE's $1.1B acquisition.</span></div></div>
       <div class="job"><div class="when">2010 – 2012</div><div><b>Gigya — Client Services Manager, Marketing Strategy &amp; Execution</b><span>Designed and ran global social marketing strategies for clients, growing followers, registrations, conversions, content syndication, and referrals.</span></div></div>
-      <div class="job"><div class="when">Education</div><div><b>University of Toronto</b><span>Physics and Astronomy</span></div></div>
+      <div class="job"><div class="when">Earlier</div><div><b>Author &amp; science writer</b><span>Emmy Award for science and technology writing for educational television; author of four books on digital color.</span></div></div>
+      <div class="job"><div class="when">Where it started</div><div><b>The Globe and Mail — Science &amp; Technology Reporter</b><span>Toronto. Studied physics and astronomy at the University of Toronto.</span></div></div>
     </div>
   </div>
 </section>
@@ -175,8 +183,8 @@
       </div>
       <div class="card">
         <div class="tag">Executive partnership</div>
-        <h3>IBM Storage CTO Vincent Hsu</h3>
-        <p>I work with IBM Storage's CTO on thought leadership around KV cache and inference memory — making the case that KV cache is AI-native infrastructure.</p>
+        <h3>Vincent Hsu, IBM Fellow and CTO, IBM Storage</h3>
+        <p>Vincent is one of the clearest technical voices on storage for AI. I'm his writing partner and the ghostwriter for his blog posts: the expertise and the point of view are his — my job is to help them land with both business and technical readers.</p>
       </div>
       <div class="card">
         <div class="tag">Joint solution</div>
@@ -193,24 +201,26 @@
   <div class="wrap">
     <div class="label">Writing &amp; Thought Leadership</div>
     <h2>Making the case for KV cache as infrastructure.</h2>
-    <p class="intro">The point of view I'm helping bring to market: as inference scales, memory and storage become first-class parts of the AI stack — not an afterthought.</p>
+    <p class="intro">The point of view I'm helping bring to market: as inference scales, memory and storage become first-class parts of the AI stack. Several of these pieces carry Vincent Hsu's byline — his expertise, my words.</p>
     <div class="grid">
       <div class="card">
         <div class="tag">Article · TechRadar</div>
-        <h3>Inference needs memory</h3> <!-- TODO: full title -->
+        <h3>Inference needs memory</h3> <!-- TODO: full title; confirm byline -->
         <p>Why KV cache is AI-native data that must be treated as infrastructure.</p>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
-        <div class="tag">Article · IBM Think</div>
+        <div class="tag">IBM Think · By Vincent Hsu</div>
         <h3>In the token economy, storage is the foundation for enterprise AI</h3> <!-- TODO: confirm exact title -->
-        <p>IBM Storage CTO Vincent Hsu on four characteristics of tokens that enterprise leaders must plan for, including persistence, reuse, and sharing.</p>
+        <p>Four characteristics of tokens that enterprise leaders must plan for, including persistence, reuse, and sharing.</p>
+        <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="https://www.ibm.com/think/insights/token-economy-storage-foundation-enterprise-ai">Read →</a>
       </div>
       <div class="card">
-        <div class="tag">Article · IBM Community</div>
+        <div class="tag">IBM Community · By Vincent Hsu</div>
         <h3>When AI agents go rogue, can your data recover?</h3> <!-- TODO: confirm exact title -->
         <p>How to keep enterprise data systems resilient as agentic AI capabilities expand.</p>
+        <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
@@ -257,8 +267,17 @@
 <section id="published">
   <div class="wrap">
     <div class="label">Published Works</div>
-    <h2>Long-form technical writing.</h2>
+    <h2>Books, primers, and bylines.</h2>
     <div class="grid">
+      <div class="card">
+        <!-- When the cover is ready, upload it to Assets/ and replace the next line with:
+             <img class="cover" src="Assets/book-cover.jpg" alt="Book cover"> -->
+        <div class="cover">Book cover<br>coming soon</div>
+        <div class="tag">Books · Author</div>
+        <h3>Four books on digital color</h3>
+        <p>Including a book on Photoshop color correction — practical guides to getting accurate, predictable color from screen to print.</p>
+        <!-- TODO: add titles / links -->
+      </div>
       <div class="card">
         <div class="tag">Technical report · NetApp</div>
         <h3>NVMe Modern SAN Primer</h3>
@@ -279,22 +298,24 @@
 <section id="talks">
   <div class="wrap">
     <div class="label">Videos &amp; Talks</div>
-    <h2>On stage and on camera.</h2>
+    <h2>On the lightboard and on camera.</h2>
+    <p class="intro">Explaining content-aware storage — and why it matters for retrieval-augmented generation — one diagram at a time.</p>
     <div class="grid">
-      <!-- TODO: add real videos. For a YouTube embed, put this inside a card:
-           <iframe width="100%" style="aspect-ratio:16/9;border:0;border-radius:8px" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
       <div class="card">
-        <div class="tag">Placeholder</div>
-        <h3>Talk title</h3>
-        <p>Venue, date, and one line on what it covered.</p>
-        <a class="more" href="#">Watch →</a>
+        <iframe class="video" src="https://www.youtube-nocookie.com/embed/6862BFYBe9M" title="What is Content-Aware Storage? Unlocking AI's Potential with RAG" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="tag">Lightboard · IBM Technology</div>
+        <h3>What is Content-Aware Storage? Unlocking AI's Potential with RAG</h3>
+        <p>How content-aware storage makes enterprise data ready for retrieval-augmented generation.</p>
+        <a class="more" href="https://www.youtube.com/watch?v=6862BFYBe9M">Watch on YouTube →</a>
       </div>
       <div class="card">
-        <div class="tag">Placeholder</div>
-        <h3>Webinar title</h3>
-        <p>Venue, date, and one line on what it covered.</p>
-        <a class="more" href="#">Watch →</a>
+        <iframe class="video" src="https://www.youtube-nocookie.com/embed/cyMdBK8oEYc" title="Content-Aware Storage: Powering AI Agents & Assistants with RAG" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="tag">Lightboard · IBM Technology</div>
+        <h3>Content-Aware Storage: Powering AI Agents &amp; Assistants with RAG</h3>
+        <p>How content-aware storage feeds AI agents and assistants the context they need.</p>
+        <a class="more" href="https://www.youtube.com/watch?v=cyMdBK8oEYc">Watch on YouTube →</a>
       </div>
+      <!-- To add another video, copy a card above and change the VIDEO_ID in both links -->
     </div>
   </div>
 </section>
@@ -303,13 +324,13 @@
 <section id="technical">
   <div class="wrap">
     <div class="label">Technical Fluency</div>
-    <h2>Fluent enough to earn the engineers' trust.</h2>
-    <p class="intro">A physics background and years as a technical marketing engineer mean I go deep on the technology before I write a word about it.</p>
+    <h2>Technical enough to earn the engineers' trust.</h2>
+    <p class="intro">A science background and years as a technical marketing engineer mean I go deep on the technology before I write a word about it.</p>
     <div class="grid">
       <div class="card">
         <div class="tag">AI infrastructure</div>
         <h3>Inference, KV cache &amp; AI factories</h3>
-        <p>How persistent KV cache, high-performance file and object storage, and GPU-accelerated pipelines fit together in large-scale inference.</p>
+        <p>How persistent KV cache, content-aware storage, high-performance file and object storage, and GPU-accelerated pipelines fit together in large-scale inference and RAG.</p>
       </div>
       <div class="card">
         <div class="tag">Storage</div>
@@ -318,8 +339,8 @@
       </div>
       <div class="card">
         <div class="tag">Science</div>
-        <h3>Physics &amp; Astronomy, University of Toronto</h3>
-        <p>Formal training in physics — the same quantitative instincts I bring to understanding how systems really perform, and to the astrophysics below.</p>
+        <h3>Physics, astronomy &amp; science journalism</h3>
+        <p>Studied physics and astronomy at the University of Toronto, then covered science and technology for The Globe and Mail — the same instincts I bring to understanding how systems really work.</p>
       </div>
     </div>
   </div>
@@ -330,106 +351,54 @@
   <div class="wrap">
     <div class="label">Astrophotography</div>
     <h2>Long exposures, and the physics behind them.</h2>
-    <p class="intro">Away from work, I put my physics and astronomy training to use photographing deep-sky objects — and writing about the astrophysics of what's in the frame. It's the same craft as my day job: making something complex and invisible understandable. Click any image to view it full-screen.</p>
+    <p class="intro">Away from work, I photograph deep-sky objects and write about the astrophysics of what's in the frame. It's the same craft as my day job: making something complex and invisible understandable. Click any image to view it full-screen.</p>
 
     <div class="astro">
 
       <!-- ===== 1. GHOST NEBULA ===== -->
       <article class="astro-item">
-        <img src="Assets/ghost-nebula.jpg" alt="Ghost Nebula Sh2-136 in luminance" loading="lazy">
-        <div class="astro-body">
-          <div>
-            <h3>Ghost Nebula — Sh2-136</h3>
-            <p>The Ghost Nebula is a faint, eerie cloud of dust in the constellation Cepheus, about 1,400 light-years away. A fitting subject for October, the Ghost is well placed high in the northern sky on autumn evenings.</p>
-            <p>Unlike glowing emission nebulae that produce their own light, the Ghost is a reflection nebula. It contains a few young stars, but they're not hot enough to ionize the surrounding gas. As a result, the Ghost shines by starlight reflected off tiny dust grains, giving it a dim, brownish-gray, smoky appearance. It's captured here through a luminance filter, which records the full range of visible light as shades of gray.</p>
-            <p>The dust grains are made of silicates, carbon, and ice, and are about the size of the particles in cigarette smoke. Beyond its spooky looks, the Ghost Nebula is scientifically interesting because it's a stellar nursery. Its dense, dark core is a Bok globule, a collapsing pocket of gas and dust where new stars are forming. Longer exposures reveal jets from an embedded protostar — literally a star in the process of being born.</p>
-          </div>
-          <div class="specs">
-            <dl>
-              <dt>Telescope</dt><dd>Stellarvue SVX102T-R</dd>
-              <dt>Aperture</dt><dd>102 mm</dd>
-              <dt>Focal length</dt><dd>714 mm @ f/7</dd>
-              <dt>Camera</dt><dd>ZWO ASI2600MM Pro</dd>
-              <dt>Filter</dt><dd>Antlia luminance</dd>
-              <dt>Dates</dt><dd>October 2026</dd>
-              <dt>Location</dt><dd>San Rafael, CA</dd>
-              <dt>Exposures</dt><dd>L — 81 × 300 s</dd>
-              <dt>Integration</dt><dd>6.8 hours</dd>
-            </dl>
-            <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
-          </div>
+        <div class="astro-img"><img src="Assets/ghost-nebula.jpg" alt="Ghost Nebula Sh2-136" loading="lazy"></div>
+        <div class="astro-text">
+          <h3>Ghost Nebula — Sh2-136</h3>
+          <p>The Ghost Nebula is a faint, eerie cloud of dust in the constellation Cepheus, about 1,400 light-years away. A fitting subject for October, the Ghost is well placed high in the northern sky on autumn evenings.</p>
+          <p>Unlike glowing emission nebulae that produce their own light, the Ghost is a reflection nebula. It contains a few young stars, but they're not hot enough to ionize the surrounding gas. As a result, the Ghost shines by starlight reflected off tiny dust grains, giving it a dim, brownish-gray, smoky appearance. It's captured here through a luminance filter, which records the full range of visible light as shades of gray.</p>
+          <p>The dust grains are made of silicates, carbon, and ice, and are about the size of the particles in cigarette smoke. Beyond its spooky looks, the Ghost Nebula is scientifically interesting because it's a stellar nursery. Its dense, dark core is a Bok globule, a collapsing pocket of gas and dust where new stars are forming. Longer exposures reveal jets from an embedded protostar — literally a star in the process of being born.</p>
+          <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
         </div>
       </article>
 
       <!-- ===== 2. SPIRAL GALAXY (description to come) ===== -->
       <article class="astro-item">
-        <img src="Assets/spiral-galaxy.jpg" alt="Spiral galaxy" loading="lazy">
-        <div class="astro-body">
-          <div>
-            <h3>Galaxy Name — Catalog ID</h3> <!-- TODO -->
-            <p>Description coming soon.</p> <!-- TODO -->
-          </div>
-          <div class="specs">
-            <dl>
-              <dt>Telescope</dt><dd>—</dd>
-              <dt>Camera</dt><dd>—</dd>
-              <dt>Filters</dt><dd>—</dd>
-              <dt>Dates</dt><dd>—</dd>
-              <dt>Location</dt><dd>—</dd>
-              <dt>Exposures</dt><dd>—</dd>
-              <dt>Integration</dt><dd>—</dd>
-            </dl>
-            <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
-          </div>
+        <div class="astro-img"><img src="Assets/spiral-galaxy.jpg" alt="Spiral galaxy" loading="lazy"></div>
+        <div class="astro-text">
+          <h3>Galaxy Name — Catalog ID</h3> <!-- TODO -->
+          <p>Description coming soon.</p> <!-- TODO -->
+          <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
         </div>
       </article>
 
       <!-- ===== 3. MILKY WAY CORE (description to come) ===== -->
       <article class="astro-item">
-        <img src="Assets/milky-way-core.jpg" alt="The Milky Way core rising over a ridgeline" loading="lazy">
-        <div class="astro-body">
-          <div>
-            <h3>The Milky Way Core — Sagittarius &amp; Scorpius</h3> <!-- TODO: confirm title -->
-            <p>Description coming soon.</p> <!-- TODO -->
-          </div>
-          <div class="specs">
-            <dl>
-              <dt>Lens / Telescope</dt><dd>—</dd>
-              <dt>Camera</dt><dd>—</dd>
-              <dt>Dates</dt><dd>—</dd>
-              <dt>Location</dt><dd>—</dd>
-              <dt>Exposures</dt><dd>—</dd>
-              <dt>Integration</dt><dd>—</dd>
-            </dl>
-            <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
-          </div>
+        <div class="astro-img"><img src="Assets/milky-way-core.jpg" alt="The Milky Way core rising over a ridgeline" loading="lazy"></div>
+        <div class="astro-text">
+          <h3>The Milky Way Core — Sagittarius &amp; Scorpius</h3> <!-- TODO: confirm title -->
+          <p>Description coming soon.</p> <!-- TODO -->
+          <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
         </div>
       </article>
 
       <!-- ===== TEMPLATE for images 4 and 5: copy everything between the dashed lines,
-           paste it above this comment, and remove the <!-- and --> around it.
+           paste it above this comment, and remove the comment markers around it.
+           Layout alternates left/right automatically.
       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       <article class="astro-item">
-        <img src="Assets/FILENAME.jpg" alt="OBJECT NAME" loading="lazy">
-        <div class="astro-body">
-          <div>
-            <h3>Object Name — Catalog ID</h3>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <p>Paragraph 3</p>
-          </div>
-          <div class="specs">
-            <dl>
-              <dt>Telescope</dt><dd></dd>
-              <dt>Camera</dt><dd></dd>
-              <dt>Filters</dt><dd></dd>
-              <dt>Dates</dt><dd></dd>
-              <dt>Location</dt><dd></dd>
-              <dt>Exposures</dt><dd></dd>
-              <dt>Integration</dt><dd></dd>
-            </dl>
-            <div class="copy">Image and text © YEAR Michael Kieran — All rights reserved</div>
-          </div>
+        <div class="astro-img"><img src="Assets/FILENAME.jpg" alt="OBJECT NAME" loading="lazy"></div>
+        <div class="astro-text">
+          <h3>Object Name — Catalog ID</h3>
+          <p>Paragraph 1</p>
+          <p>Paragraph 2</p>
+          <p>Paragraph 3</p>
+          <div class="copy">Image and text © YEAR Michael Kieran — All rights reserved</div>
         </div>
       </article>
       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -458,9 +427,9 @@
 
 <div id="lb"><img alt=""></div>
 <script>
-  // Click an astrophoto to view it full-screen; click again to close
+  // Click an astrophoto to view it full-screen; click again or press Esc to close
   const lb=document.getElementById('lb'), lbImg=lb.querySelector('img');
-  document.querySelectorAll('.astro-item img').forEach(img=>{
+  document.querySelectorAll('.astro-img img').forEach(img=>{
     img.addEventListener('click',()=>{lbImg.src=img.src;lbImg.alt=img.alt;lb.style.display='flex';});
   });
   lb.addEventListener('click',()=>{lb.style.display='none';});
