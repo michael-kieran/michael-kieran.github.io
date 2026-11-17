@@ -66,10 +66,12 @@
   .credit{font-size:13px;color:var(--muted);font-style:italic;margin-top:12px}
   .about p{font-size:17px;max-width:800px;margin-bottom:16px;color:#cdd3e1}
 
-  /* Video cards */
+  /* Screenshot thumbnails at the top of cards */
+  .thumb{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px;margin-bottom:16px;border:1px solid var(--line);background:#fff}
+  .zoom{cursor:zoom-in}
+
   .video{width:100%;aspect-ratio:16/9;border:0;border-radius:8px;margin-bottom:16px;background:#000}
 
-  /* Book cover */
   .cover{width:100%;aspect-ratio:3/4;max-width:180px;border:1px dashed var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;
     color:var(--muted);font-size:13px;text-align:center;padding:12px;margin-bottom:16px;background:var(--bg2)}
   img.cover{border:0;padding:0;object-fit:cover}
@@ -80,11 +82,10 @@
   .job b{display:block} .job span{color:var(--muted);font-size:15px}
   @media(max-width:600px){.job{grid-template-columns:1fr;gap:4px}}
 
-  /* Astrophotography: image and text side by side, alternating */
   .astro{display:grid;gap:36px}
   .astro-item{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px}
   .astro-item:nth-child(even) .astro-img{order:2}
-  .astro-img img{width:100%;display:block;border-radius:8px;cursor:zoom-in;background:#000}
+  .astro-img img{width:100%;display:block;border-radius:8px;background:#000}
   .astro-text h3{font-size:22px;margin-bottom:12px}
   .astro-text p{font-family:var(--serif);font-size:16px;color:#cdd3e1;margin-bottom:12px}
   .copy{margin-top:8px;font-size:12px;color:var(--muted);font-style:italic}
@@ -93,9 +94,8 @@
   #lb{position:fixed;inset:0;background:#000e;display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
   #lb img{max-width:95vw;max-height:95vh}
 
-  footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line);text-align:center}
-  .contact-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:40px;text-align:center}
-  .contact-box .btns{justify-content:center}
+  footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  .contact-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:40px}
 </style>
 </head>
 <body>
@@ -128,30 +128,27 @@
       <div class="btns">
         <a class="btn primary" href="https://www.linkedin.com/in/michaelkieran/">LinkedIn</a>
         <a class="btn" href="mailto:mkieran@mrkieran.com">Email</a>
-        <!-- Optional: add a résumé button once Assets/Michael_Kieran_Resume.pdf is uploaded
-        <a class="btn" href="Assets/Michael_Kieran_Resume.pdf">Download résumé</a> -->
       </div>
     </div>
-    <img class="headshot" src="Assets/Mike%20Kieran%20Profile%20Photo%20Cropped.jpg" alt="Michael Kieran">
+    <img class="headshot" src="Assets/michael-kieran-profile-cropped.jpg" alt="Michael Kieran">
   </div>
 </header>
 
 <!-- ============ BIG NUMBERS ============ -->
 <div class="wrap" style="padding-bottom:70px">
   <div class="stats">
-    <div class="stat"><b>Emmy</b><span>Award for science &amp; technology writing for educational television</span></div>
+    <div class="stat"><b>1 Emmy</b><span>Award for science &amp; technology writing for educational television</span></div>
     <div class="stat"><b>4 books</b><span>On digital color, including Photoshop color correction</span></div>
     <div class="stat"><b>400%</b><span>Corporate blog page-view growth in 24 months (Nimble Storage)</span></div>
     <div class="stat"><b>0 → 20K+</b><span>Monthly social engagements, built from scratch</span></div>
   </div>
-  <!-- TODO: consider swapping in an IBM-era metric (pipeline, launch results, analyst wins) -->
 </div>
 
 <!-- ============ ABOUT ============ -->
 <section id="about" class="about">
   <div class="wrap">
     <div class="label">About</div>
-    <h2>A science writer who became an AI-infrastructure storyteller.</h2>
+    <h2>From science and technology reporter to AI infrastructure storyteller.</h2>
     <p>I started my career as a science and technology reporter at The Globe and Mail in Toronto, after studying physics and astronomy at the University of Toronto. I went on to win an Emmy for science and technology writing for educational television, and wrote four books on digital color. Explaining hard things clearly has been the through-line ever since.</p>
     <p>That carried me into enterprise infrastructure — including years on the technical side as a technical marketing engineer at NetApp, writing the content that helped buyers, sellers, SEs, and channel partners understand storage area networks. I don't message a product until I understand how it actually behaves.</p>
     <p>Today I lead messaging and go-to-market for IBM Storage Scale, one of the world's leading file and object storage platforms for HPC and AI workloads, as part of the IBM Fusion AI team. I own the marketing relationship between IBM Storage and NVIDIA, and I'm the writing partner to IBM Storage CTO Vincent Hsu on KV cache and inference memory — positioning KV cache as AI-native infrastructure.</p>
@@ -204,23 +201,42 @@
     <p class="intro">The point of view I'm helping bring to market: as inference scales, memory and storage become first-class parts of the AI stack. Several of these pieces carry Vincent Hsu's byline — his expertise, my words.</p>
     <div class="grid">
       <div class="card">
-        <div class="tag">Article · TechRadar</div>
-        <h3>Inference needs memory</h3> <!-- TODO: full title; confirm byline -->
-        <p>Why KV cache is AI-native data that must be treated as infrastructure.</p>
+        <img class="thumb zoom" src="Assets/to-cut-infrastructure-costs.png" alt="To Cut Infrastructure Costs, Put AI Context on Storage, by Vincent Hsu" loading="lazy">
+        <div class="tag">IBM Community · By Vincent Hsu · Oct 2026</div>
+        <h3>To Cut Infrastructure Costs, Put AI Context on Storage</h3>
+        <p>A benchmark with NVIDIA, Supermicro, and Tensormesh showed that storing AI context on fast storage instead of RAM can cut an inference system's memory needs by 80% without a measurable slowdown.</p>
+        <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
+                <img class="thumb zoom" src="Assets/in-the-token-economy.png" alt="In the token economy, by Vincent Hsu" loading="lazy">
         <div class="tag">IBM Think · By Vincent Hsu</div>
-        <h3>In the token economy, storage is the foundation for enterprise AI</h3> <!-- TODO: confirm exact title -->
+        <h3>In the token economy, storage is the foundation for enterprise AI</h3> <!-- TODO: confirm exact title; add screenshot -->
         <p>Four characteristics of tokens that enterprise leaders must plan for, including persistence, reuse, and sharing.</p>
         <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="https://www.ibm.com/think/insights/token-economy-storage-foundation-enterprise-ai">Read →</a>
       </div>
       <div class="card">
+                <img class="thumb zoom" src="Assets/when-ai-agents-go-rogue.png" alt="When AI agents go rogue, by Vincent Hsu" loading="lazy">
         <div class="tag">IBM Community · By Vincent Hsu</div>
-        <h3>When AI agents go rogue, can your data recover?</h3> <!-- TODO: confirm exact title -->
+        <h3>When AI agents go rogue, can your data recover?</h3> <!-- TODO: confirm exact title; add screenshot -->
         <p>How to keep enterprise data systems resilient as agentic AI capabilities expand.</p>
         <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
+        <a class="more" href="#">Read →</a> <!-- TODO: link -->
+      </div>
+            <div class="card">
+        <img class="thumb zoom" src="Assets/if-you-cant-trust-the-agent.png" alt="If you can't trust the agent, by Vincent Hsu" loading="lazy">
+        <div class="tag">IBM Community · By Vincent Hsu</div>
+        <h3>If You Can't Trust the Agent…</h3> <!-- TODO: full title -->
+        <p>Description coming soon.</p> <!-- TODO -->
+        <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
+        <a class="more" href="#">Read →</a> <!-- TODO: link -->
+      </div>
+      <div class="card">
+        
+        <div class="tag">Article · TechRadar</div>
+        <h3>Inference needs memory</h3> <!-- TODO: full title; confirm byline -->
+        <p>Why KV cache is AI-native data that must be treated as infrastructure.</p>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
@@ -229,6 +245,8 @@
         <p>Launch announcement for the QLC-based Storage Scale System.</p>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
+      <!-- To add a screenshot to any card, put this as the card's first line:
+           <img class="thumb zoom" src="Assets/FILENAME.png" alt="ARTICLE TITLE" loading="lazy"> -->
     </div>
   </div>
 </section>
@@ -267,16 +285,20 @@
 <section id="published">
   <div class="wrap">
     <div class="label">Published Works</div>
-    <h2>Books, primers, and bylines.</h2>
+    <h2>Books, journalism, primers, and bylines.</h2>
     <div class="grid">
       <div class="card">
-        <!-- When the cover is ready, upload it to Assets/ and replace the next line with:
-             <img class="cover" src="Assets/book-cover.jpg" alt="Book cover"> -->
-    <img class="cover" src="Assets/pcc-book-cover.png" alt="Photoshop Color Correction book cover">
+        <img class="cover zoom" src="Assets/pcc-book-cover.png" alt="Photoshop Color Correction book cover">
         <div class="tag">Books · Author</div>
         <h3>Four books on digital color</h3>
-        <p>Including a book on Photoshop color correction — practical guides to getting accurate, predictable color from screen to print.</p>
-        <!-- TODO: add titles / links -->
+        <p>Including <em>Photoshop Color Correction</em> — practical guides to getting accurate, predictable color from screen to print.</p>
+        <!-- TODO: add the other three titles -->
+      </div>
+      <div class="card">
+        <img class="thumb zoom" src="Assets/grace-hopper.jpg" alt="Grandma Cobol looking into future, by Michael Kieran, The Globe and Mail, April 22, 1983" loading="lazy">
+        <div class="tag">The Globe and Mail · April 22, 1983</div>
+        <h3>Grandma Cobol looking into future</h3>
+        <p>My interview with computing pioneer Grace Hopper — the U.S. Navy captain behind COBOL — during her visit to Toronto to talk about the role of people in the computer age.</p>
       </div>
       <div class="card">
         <div class="tag">Technical report · NetApp</div>
@@ -315,7 +337,6 @@
         <p>How content-aware storage feeds AI agents and assistants the context they need.</p>
         <a class="more" href="https://www.youtube.com/watch?v=cyMdBK8oEYc">Watch on YouTube →</a>
       </div>
-      <!-- To add another video, copy a card above and change the VIDEO_ID in both links -->
     </div>
   </div>
 </section>
@@ -355,9 +376,8 @@
 
     <div class="astro">
 
-      <!-- ===== 1. GHOST NEBULA ===== -->
       <article class="astro-item">
-        <div class="astro-img"><img src="Assets/ghost-nebula.jpg" alt="Ghost Nebula Sh2-136" loading="lazy"></div>
+        <div class="astro-img"><img class="zoom" src="Assets/ghost-nebula.jpg" alt="Ghost Nebula Sh2-136" loading="lazy"></div>
         <div class="astro-text">
           <h3>Ghost Nebula — Sh2-136</h3>
           <p>The Ghost Nebula is a faint, eerie cloud of dust in the constellation Cepheus, about 1,400 light-years away. A fitting subject for October, the Ghost is well placed high in the northern sky on autumn evenings.</p>
@@ -367,9 +387,8 @@
         </div>
       </article>
 
-      <!-- ===== 2. SPIRAL GALAXY (description to come) ===== -->
       <article class="astro-item">
-        <div class="astro-img"><img src="Assets/spiral-galaxy.jpg" alt="Spiral galaxy" loading="lazy"></div>
+        <div class="astro-img"><img class="zoom" src="Assets/spiral-galaxy.jpg" alt="Spiral galaxy" loading="lazy"></div>
         <div class="astro-text">
           <h3>Galaxy Name — Catalog ID</h3> <!-- TODO -->
           <p>Description coming soon.</p> <!-- TODO -->
@@ -377,9 +396,8 @@
         </div>
       </article>
 
-      <!-- ===== 3. MILKY WAY CORE (description to come) ===== -->
       <article class="astro-item">
-        <div class="astro-img"><img src="Assets/milky-way-core.jpg" alt="The Milky Way core rising over a ridgeline" loading="lazy"></div>
+        <div class="astro-img"><img class="zoom" src="Assets/milky-way-core.jpg" alt="The Milky Way core rising over a ridgeline" loading="lazy"></div>
         <div class="astro-text">
           <h3>The Milky Way Core — Sagittarius &amp; Scorpius</h3> <!-- TODO: confirm title -->
           <p>Description coming soon.</p> <!-- TODO -->
@@ -389,10 +407,9 @@
 
       <!-- ===== TEMPLATE for images 4 and 5: copy everything between the dashed lines,
            paste it above this comment, and remove the comment markers around it.
-           Layout alternates left/right automatically.
       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       <article class="astro-item">
-        <div class="astro-img"><img src="Assets/FILENAME.jpg" alt="OBJECT NAME" loading="lazy"></div>
+        <div class="astro-img"><img class="zoom" src="Assets/FILENAME.jpg" alt="OBJECT NAME" loading="lazy"></div>
         <div class="astro-text">
           <h3>Object Name — Catalog ID</h3>
           <p>Paragraph 1</p>
@@ -413,8 +430,8 @@
   <div class="wrap">
     <div class="contact-box">
       <div class="label">Contact</div>
-      <h2 style="margin:10px auto 12px">Let's talk.</h2>
-      <p class="intro" style="margin:0 auto 10px">I'm always glad to talk about AI infrastructure, storage, and the stories that make complex technology make sense — or the night sky.</p>
+      <h2>Let's talk.</h2>
+      <p class="intro" style="margin-bottom:0">I'm always glad to talk about AI infrastructure, storage, and the stories that make complex technology make sense — or the night sky.</p>
       <div class="btns">
         <a class="btn primary" href="mailto:mkieran@mrkieran.com">mkieran@mrkieran.com</a>
         <a class="btn" href="https://www.linkedin.com/in/michaelkieran/">LinkedIn</a>
@@ -423,13 +440,13 @@
   </div>
 </section>
 
-<footer>© 2026 Michael Kieran · Built with GitHub Pages</footer>
+<footer><div class="wrap">© 2026 Michael Kieran · Built with GitHub Pages</div></footer>
 
 <div id="lb"><img alt=""></div>
 <script>
-  // Click an astrophoto to view it full-screen; click again or press Esc to close
+  // Click any image marked "zoom" to view it full-screen; click again or press Esc to close
   const lb=document.getElementById('lb'), lbImg=lb.querySelector('img');
-  document.querySelectorAll('.astro-img img').forEach(img=>{
+  document.querySelectorAll('img.zoom').forEach(img=>{
     img.addEventListener('click',()=>{lbImg.src=img.src;lbImg.alt=img.alt;lb.style.display='flex';});
   });
   lb.addEventListener('click',()=>{lb.style.display='none';});
