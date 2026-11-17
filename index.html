@@ -6,96 +6,95 @@
 <title>Michael Kieran | Product Marketing for AI Infrastructure</title>
 <meta name="description" content="Michael Kieran leads messaging and go-to-market for IBM Storage Scale, focused on object storage, inference, and KV cache for AI factories. Emmy-winning science writer, author, and astrophotographer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#070a12; --bg2:#0d1220; --card:#121829; --line:#1f2840;
-    --text:#e6e9f2; --muted:#9aa3b8; --accent:#7cc4ff; --accent2:#b79cff;
-    --serif:'Source Serif 4',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+    --bg:#ffffff; --alt:#f7f6f3; --text:#1b1d21; --muted:#5d6470; --line:#e3e1dc;
+    --accent:#1f3a5f; --accent-hover:#16304f;
+    --serif:'Source Serif 4',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;
-    background-image:radial-gradient(1px 1px at 20% 30%,#ffffff22 50%,transparent 51%),
-      radial-gradient(1px 1px at 70% 10%,#ffffff1a 50%,transparent 51%),
-      radial-gradient(1px 1px at 40% 80%,#ffffff18 50%,transparent 51%),
-      radial-gradient(1px 1px at 85% 60%,#ffffff22 50%,transparent 51%);
-    background-size:400px 400px;}
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
-  nav{position:sticky;top:0;z-index:10;background:#070a12e6;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-  nav .name{font-weight:700;color:var(--text)}
-  nav ul{display:flex;gap:18px;list-style:none;font-size:14px;flex-wrap:wrap}
+  nav .name{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--text)}
+  nav .name:hover{text-decoration:none}
+  nav ul{display:flex;gap:22px;list-style:none;font-size:14px}
   nav ul a{color:var(--muted)} nav ul a:hover{color:var(--text);text-decoration:none}
-  @media(max-width:900px){nav ul{display:none}}
+  @media(max-width:920px){nav ul{display:none}}
 
-  header.hero{padding:90px 0 60px}
-  .hero-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:center}
-  .eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-  h1{font-size:clamp(32px,4.5vw,52px);line-height:1.12;margin:14px 0 20px;font-weight:700}
-  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lede{color:var(--muted);font-size:18px;max-width:620px}
+  /* Hero */
+  header.hero{padding:88px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;align-items:center}
+  .eyebrow{color:var(--muted);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.2vw,46px);line-height:1.15;margin:16px 0 22px;letter-spacing:-.01em}
+  .lede{color:var(--muted);font-size:18px;max-width:600px}
   .meta{margin-top:18px;color:var(--muted);font-size:14px}
-  .btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-  .btn{padding:10px 18px;border-radius:8px;border:1px solid var(--line);color:var(--text);font-weight:500;font-size:14px}
-  .btn.primary{background:var(--accent);color:#06101f;border-color:var(--accent)}
-  .btn:hover{text-decoration:none;border-color:var(--accent)}
-  .headshot{width:100%;max-width:320px;aspect-ratio:1;border-radius:50%;object-fit:cover;border:2px solid var(--line);justify-self:center;box-shadow:0 0 80px #7cc4ff22}
-  @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.headshot{max-width:200px;order:-1}}
+  .btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .btn{padding:10px 20px;border-radius:4px;border:1px solid var(--line);color:var(--text);font-weight:500;font-size:14px;background:#fff}
+  .btn:hover{text-decoration:none;border-color:var(--text)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-hover)}
+  .headshot{width:100%;max-width:280px;aspect-ratio:1;border-radius:50%;object-fit:cover;justify-self:end}
+  @media(max-width:800px){.hero-grid{grid-template-columns:1fr}.headshot{max-width:180px;order:-1;justify-self:start}}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
-  .stat b{display:block;font-size:34px;color:var(--accent);line-height:1.1}
-  .stat span{color:var(--muted);font-size:14px}
-  @media(max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}}
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{padding:28px 24px 28px 0}
+  .stat + .stat{padding-left:24px;border-left:1px solid var(--line)}
+  .stat b{display:block;font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.1;margin-bottom:6px}
+  .stat span{color:var(--muted);font-size:14px;line-height:1.5;display:block}
+  @media(max-width:800px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){padding-left:0;border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
 
-  section{padding:80px 0;border-top:1px solid var(--line)}
-  .label{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-  h2{font-size:clamp(26px,3vw,36px);line-height:1.2;margin:10px 0 16px;max-width:800px}
-  .intro{color:var(--muted);max-width:760px;margin-bottom:36px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:border-color .2s}
-  .card:hover{border-color:#7cc4ff66}
-  .tag{font-size:12px;color:var(--accent2);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
-  .card h3{font-size:19px;margin:8px 0 10px;line-height:1.3}
+  /* Sections */
+  section{padding:84px 0}
+  section.alt{background:var(--alt)}
+  .label{color:var(--muted);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.2;margin:10px 0 16px;max-width:780px;letter-spacing:-.01em}
+  .intro{color:var(--muted);max-width:720px;margin-bottom:40px;font-size:17px}
+
+  /* Cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px;display:flex;flex-direction:column}
+  .tag{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:20px;margin:8px 0 10px;line-height:1.3}
   .card p{color:var(--muted);font-size:15px;flex:1}
-  .card a.more{margin-top:16px;font-weight:600;font-size:14px}
+  .card a.more{margin-top:18px;font-weight:500;font-size:14px}
   .credit{font-size:13px;color:var(--muted);font-style:italic;margin-top:12px}
-  .about p{font-size:17px;max-width:800px;margin-bottom:16px;color:#cdd3e1}
-
-  /* Screenshot thumbnails at the top of cards */
-  .thumb{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px;margin-bottom:16px;border:1px solid var(--line);background:#fff}
+  .thumb{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:4px;margin-bottom:18px;border:1px solid var(--line);background:#f2f2f2}
+  .cover{width:150px;aspect-ratio:3/4;object-fit:cover;border-radius:2px;margin-bottom:18px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+  .video{width:100%;aspect-ratio:16/9;border:0;border-radius:4px;margin-bottom:18px;background:#000}
   .zoom{cursor:zoom-in}
 
-  .video{width:100%;aspect-ratio:16/9;border:0;border-radius:8px;margin-bottom:16px;background:#000}
-
-  .cover{width:100%;aspect-ratio:3/4;max-width:180px;border:1px dashed var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;
-    color:var(--muted);font-size:13px;text-align:center;padding:12px;margin-bottom:16px;background:var(--bg2)}
-  img.cover{border:0;padding:0;object-fit:cover}
-
-  .timeline{margin-top:30px;display:grid;gap:12px}
-  .job{display:grid;grid-template-columns:160px 1fr;gap:20px;padding:14px 0;border-bottom:1px dashed var(--line)}
+  /* About */
+  .about p{font-size:17px;max-width:760px;margin-bottom:16px}
+  .timeline{margin-top:40px;border-top:1px solid var(--line)}
+  .job{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
   .job .when{color:var(--muted);font-size:14px}
-  .job b{display:block} .job span{color:var(--muted);font-size:15px}
-  @media(max-width:600px){.job{grid-template-columns:1fr;gap:4px}}
+  .job b{display:block;font-weight:600} .job span{color:var(--muted);font-size:15px}
+  @media(max-width:600px){.job{grid-template-columns:1fr;gap:2px}}
 
-  .astro{display:grid;gap:36px}
-  .astro-item{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px}
+  /* Astrophotography */
+  .astro{display:grid;gap:56px}
+  .astro-item{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
   .astro-item:nth-child(even) .astro-img{order:2}
-  .astro-img img{width:100%;display:block;border-radius:8px;background:#000}
-  .astro-text h3{font-size:22px;margin-bottom:12px}
-  .astro-text p{font-family:var(--serif);font-size:16px;color:#cdd3e1;margin-bottom:12px}
-  .copy{margin-top:8px;font-size:12px;color:var(--muted);font-style:italic}
-  @media(max-width:800px){.astro-item{grid-template-columns:1fr}.astro-item:nth-child(even) .astro-img{order:0}}
+  .astro-img img{width:100%;display:block;border-radius:4px;background:#000}
+  .astro-text h3{font-family:var(--serif);font-weight:600;font-size:24px;margin-bottom:14px}
+  .astro-text p{font-family:var(--serif);font-size:17px;margin-bottom:14px}
+  .copy{font-size:12px;color:var(--muted);margin-top:6px}
+  @media(max-width:800px){.astro-item{grid-template-columns:1fr;gap:20px}.astro-item:nth-child(even) .astro-img{order:0}}
 
-  #lb{position:fixed;inset:0;background:#000e;display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
-  #lb img{max-width:95vw;max-height:95vh}
+  /* Lightbox */
+  #lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+  #lb img{max-width:94vw;max-height:94vh}
 
-  footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-  .contact-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:40px}
+  footer{padding:32px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -122,8 +121,8 @@
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Product Marketing · AI Infrastructure · Partner GTM</div>
-      <h1>Marketing the <span>storage and memory layer</span> of the AI stack.</h1>
-      <p class="lede">High-performance object storage, GPU-accelerated inference, and KV cache for AI factories. A career that started in science journalism and now centers on making complex infrastructure make sense — leading messaging and GTM for IBM Storage Scale and the IBM Storage–NVIDIA marketing relationship.</p>
+      <h1>Marketing the storage and memory layer of the AI stack.</h1>
+      <p class="lede">High-performance object storage, GPU-accelerated inference, and KV cache for AI factories. A career that began in science journalism and now centers on making complex infrastructure make sense — leading messaging and GTM for IBM Storage Scale and the IBM Storage–NVIDIA marketing relationship.</p>
       <div class="meta">Product Marketing at IBM · San Francisco Bay Area</div>
       <div class="btns">
         <a class="btn primary" href="https://www.linkedin.com/in/michaelkieran/">LinkedIn</a>
@@ -135,33 +134,33 @@
 </header>
 
 <!-- ============ BIG NUMBERS ============ -->
-<div class="wrap" style="padding-bottom:70px">
+<div class="wrap" style="padding-bottom:84px">
   <div class="stats">
-    <div class="stat"><b>1 Emmy</b><span>Award for science &amp; technology writing for educational television</span></div>
+    <div class="stat"><b>1 Emmy</b><span>For science and technology writing for educational television</span></div>
     <div class="stat"><b>4 books</b><span>On digital color, including Photoshop color correction</span></div>
-    <div class="stat"><b>400%</b><span>Corporate blog page-view growth in 24 months (Nimble Storage)</span></div>
-    <div class="stat"><b>0 → 20K+</b><span>Monthly social engagements, built from scratch</span></div>
+    <div class="stat"><b>400%</b><span>Corporate blog page-view growth in 24 months at Nimble Storage</span></div>
+    <div class="stat"><b>20K+</b><span>Monthly social engagements, built from zero</span></div>
   </div>
 </div>
 
 <!-- ============ ABOUT ============ -->
-<section id="about" class="about">
+<section id="about" class="about alt">
   <div class="wrap">
     <div class="label">About</div>
     <h2>From science and technology reporter to AI infrastructure storyteller.</h2>
     <p>I started my career as a science and technology reporter at The Globe and Mail in Toronto, after studying physics and astronomy at the University of Toronto. I went on to win an Emmy for science and technology writing for educational television, and wrote four books on digital color. Explaining hard things clearly has been the through-line ever since.</p>
-    <p>That carried me into enterprise infrastructure — including years on the technical side as a technical marketing engineer at NetApp, writing the content that helped buyers, sellers, SEs, and channel partners understand storage area networks.</p>
-    <p>Today I lead messaging and go-to-market for IBM Storage Scale, one of the world's leading file and object storage platforms for HPC and AI workloads, as part of the IBM Fusion AI team. I own the marketing relationship between IBM Storage and NVIDIA, and I'm the writing partner to IBM Storage CTO Vincent Hsu on KV cache and inference memory — positioning KV cache as AI-native infrastructure.</p>
+    <p>That carried me into enterprise infrastructure — including years as a technical marketing engineer at NetApp, writing the content that helped buyers, sellers, SEs, and channel partners understand storage area networks. I don't message a product until I understand how it actually behaves.</p>
+    <p>Today I lead messaging and go-to-market for IBM Storage Scale, one of the world's leading file and object storage platforms for HPC and AI workloads, as part of the IBM Fusion AI team. I own the marketing relationship between IBM Storage and NVIDIA, and I'm the writing partner to IBM Storage CTO Vincent Hsu on KV cache and inference memory.</p>
 
     <div class="timeline">
       <div class="job"><div class="when">2023 – Present</div><div><b>IBM — Global Marketing Manager, Storage for Data &amp; AI</b><span>Lead all messaging and GTM for IBM Storage Scale; own the IBM Storage–NVIDIA marketing relationship.</span></div></div>
       <div class="job"><div class="when">2022 – 2023</div><div><b>IBM — Senior Marketing Manager, Data Resilience</b><span>Data protection software, flash, tape, and storage-as-a-service. Launched the IBM Diamondback tape system.</span></div></div>
       <div class="job"><div class="when">2020 – 2021</div><div><b>Pure Storage — Senior Product Marketing Manager</b><span>Messaging guides, launch collateral, and content production for multiple launches.</span></div></div>
       <div class="job"><div class="when">2017 – 2020</div><div><b>NetApp — Senior Technical Marketing Engineer</b><span>SAN content for buyers, sales, SEs, and channel partners; created the NVMe Modern SAN Primer.</span></div></div>
-      <div class="job"><div class="when">2012 – 2016</div><div><b>Nimble Storage — Marketing Director; Sr. Manager &amp; Manager, Social Marketing</b><span>Built social from zero to 20K+ monthly engagements; grew the corporate blog 400%; led social strategy in the run-up to HPE's $1.1B acquisition.</span></div></div>
+      <div class="job"><div class="when">2012 – 2016</div><div><b>Nimble Storage — Marketing Director; Sr. Manager and Manager, Social Marketing</b><span>Built social from zero to 20K+ monthly engagements; grew the corporate blog 400%; led social strategy in the run-up to HPE's $1.1B acquisition.</span></div></div>
       <div class="job"><div class="when">2010 – 2012</div><div><b>Gigya — Client Services Manager, Marketing Strategy &amp; Execution</b><span>Designed and ran global social marketing strategies for clients, growing followers, registrations, conversions, content syndication, and referrals.</span></div></div>
-      <div class="job"><div class="when">Earlier</div><div><b>Author &amp; science writer</b><span>Emmy Award for science and technology writing for educational television; author of four books on digital color.</span></div></div>
-      <div class="job"><div class="when">Where it started</div><div><b>The Globe and Mail — Science &amp; Technology Reporter</b><span>Toronto. Studied physics and astronomy at the University of Toronto.</span></div></div>
+      <div class="job"><div class="when">Earlier</div><div><b>Author and science writer</b><span>Emmy Award for science and technology writing for educational television; author of four books on digital color.</span></div></div>
+      <div class="job"><div class="when">Where it started</div><div><b>The Globe and Mail — Science and Technology Reporter</b><span>Toronto. Studied physics and astronomy at the University of Toronto.</span></div></div>
     </div>
   </div>
 </section>
@@ -176,7 +175,7 @@
       <div class="card">
         <div class="tag">Partner</div>
         <h3>NVIDIA</h3>
-        <p>I manage the relationship between IBM Storage and NVIDIA, aligning joint messaging for AI factories, GPU-accelerated inference, and storage for AI workloads.</p>
+        <p>I own the marketing relationship between IBM Storage and NVIDIA, aligning joint messaging for AI factories, GPU-accelerated inference, and storage for AI workloads.</p>
       </div>
       <div class="card">
         <div class="tag">Executive partnership</div>
@@ -185,7 +184,7 @@
       </div>
       <div class="card">
         <div class="tag">Joint solution</div>
-        <h3>IBM · NVIDIA · Supermicro</h3>
+        <h3>IBM, NVIDIA, and Supermicro</h3>
         <p>A KV cache high-performance platform for large-scale AI inference, combining Supermicro Petascale all-flash servers with IBM Storage Scale and NVIDIA technology.</p>
         <a class="more" href="#">Learn more →</a> <!-- TODO: link -->
       </div>
@@ -194,47 +193,45 @@
 </section>
 
 <!-- ============ WRITING ============ -->
-<section id="writing">
+<section id="writing" class="alt">
   <div class="wrap">
     <div class="label">Writing &amp; Thought Leadership</div>
     <h2>Making the case for KV cache as infrastructure.</h2>
-    <p class="intro">I'm honored to collaborate with Vincent Hsu, the CTO for IBM Storage, to produce thought-leadership blog posts that combine his technical expertise with my writing skills. 
-      A theme we've deeply explored recently is that as inference scales, memory and storage become first-class parts of the AI stack.</p>
+    <p class="intro">The point of view I'm helping bring to market: as inference scales, memory and storage become first-class parts of the AI stack. Several of these pieces carry Vincent Hsu's byline — his expertise, my words.</p>
     <div class="grid">
       <div class="card">
         <img class="thumb zoom" src="Assets/to-cut-infrastructure-costs.png" alt="To Cut Infrastructure Costs, Put AI Context on Storage, by Vincent Hsu" loading="lazy">
-        <div class="tag">IBM Community · By Vincent Hsu · Oct 2026</div>
+        <div class="tag">IBM Community · Vincent Hsu · Oct 2026</div>
         <h3>To Cut Infrastructure Costs, Put AI Context on Storage</h3>
         <p>A benchmark with NVIDIA, Supermicro, and Tensormesh showed that storing AI context on fast storage instead of RAM can cut an inference system's memory needs by 80% without a measurable slowdown.</p>
         <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
-                <img class="thumb zoom" src="Assets/in-the-token-economy.png" alt="In the token economy, by Vincent Hsu" loading="lazy">
-        <div class="tag">IBM Think · By Vincent Hsu</div>
-        <h3>In the token economy, storage is the foundation for enterprise AI</h3> <!-- TODO: confirm exact title; add screenshot -->
+        <img class="thumb zoom" src="Assets/in-the-token-economy.png" alt="In the token economy, by Vincent Hsu" loading="lazy">
+        <div class="tag">IBM Think · Vincent Hsu</div>
+        <h3>In the token economy, storage is the foundation for enterprise AI</h3> <!-- TODO: confirm exact title -->
         <p>Four characteristics of tokens that enterprise leaders must plan for, including persistence, reuse, and sharing.</p>
         <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="https://www.ibm.com/think/insights/token-economy-storage-foundation-enterprise-ai">Read →</a>
       </div>
       <div class="card">
-                <img class="thumb zoom" src="Assets/when-ai-agents-go-rogue.png" alt="When AI agents go rogue, by Vincent Hsu" loading="lazy">
-        <div class="tag">IBM Community · By Vincent Hsu</div>
-        <h3>When AI agents go rogue, can your data recover?</h3> <!-- TODO: confirm exact title; add screenshot -->
+        <img class="thumb zoom" src="Assets/when-ai-agents-go-rogue.png" alt="When AI agents go rogue, by Vincent Hsu" loading="lazy">
+        <div class="tag">IBM Community · Vincent Hsu</div>
+        <h3>When AI agents go rogue, can your data recover?</h3> <!-- TODO: confirm exact title -->
         <p>How to keep enterprise data systems resilient as agentic AI capabilities expand.</p>
         <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
-            <div class="card">
+      <div class="card">
         <img class="thumb zoom" src="Assets/if-you-cant-trust-the-agent.png" alt="If you can't trust the agent, by Vincent Hsu" loading="lazy">
-        <div class="tag">IBM Community · By Vincent Hsu</div>
+        <div class="tag">IBM Community · Vincent Hsu</div>
         <h3>If You Can't Trust the Agent…</h3> <!-- TODO: full title -->
         <p>Description coming soon.</p> <!-- TODO -->
         <div class="credit">Written with Vincent Hsu, IBM Storage CTO</div>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
-        
         <div class="tag">Article · TechRadar</div>
         <h3>Inference needs memory</h3> <!-- TODO: full title; confirm byline -->
         <p>Why KV cache is AI-native data that must be treated as infrastructure.</p>
@@ -246,8 +243,6 @@
         <p>Launch announcement for the QLC-based Storage Scale System.</p>
         <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
-      <!-- To add a screenshot to any card, put this as the card's first line:
-           <img class="thumb zoom" src="Assets/FILENAME.png" alt="ARTICLE TITLE" loading="lazy"> -->
     </div>
   </div>
 </section>
@@ -259,7 +254,7 @@
     <h2>Content the field actually uses.</h2>
     <p class="intro">From my years as a technical marketing engineer onward, I've built content for the people who sell: sellers, solutions engineers, and channel partners.</p>
     <div class="grid">
-      <!-- TODO: replace with real enablement pieces (decks, battlecards, videos, workshops) -->
+      <!-- TODO: replace with real enablement pieces -->
       <div class="card">
         <div class="tag">Messaging guide</div>
         <h3>Launch messaging guides</h3>
@@ -268,12 +263,12 @@
       </div>
       <div class="card">
         <div class="tag">Field content</div>
-        <h3>SAN enablement for sellers &amp; partners</h3>
+        <h3>SAN enablement for sellers and partners</h3>
         <p>Content built around the real questions buyers, salespeople, SEs, and channel partners were asking.</p>
         <a class="more" href="#">View →</a>
       </div>
       <div class="card">
-        <div class="tag">Placeholder</div>
+        <div class="tag">Partner enablement</div>
         <h3>NVIDIA joint enablement</h3>
         <p>Description to come.</p>
         <a class="more" href="#">View →</a>
@@ -283,7 +278,7 @@
 </section>
 
 <!-- ============ PUBLISHED WORKS ============ -->
-<section id="published">
+<section id="published" class="alt">
   <div class="wrap">
     <div class="label">Published Works</div>
     <h2>Books, journalism, primers, and bylines.</h2>
@@ -305,7 +300,7 @@
         <div class="tag">Technical report · NetApp</div>
         <h3>NVMe Modern SAN Primer</h3>
         <p>A primer on NVMe and how it reshapes modern storage area networks.</p>
-        <a class="more" href="#">Read →</a> <!-- TODO: link or upload PDF to Assets/ -->
+        <a class="more" href="#">Read →</a> <!-- TODO: link -->
       </div>
       <div class="card">
         <div class="tag">Bylines</div>
@@ -334,7 +329,7 @@
       <div class="card">
         <iframe class="video" src="https://www.youtube-nocookie.com/embed/cyMdBK8oEYc" title="Content-Aware Storage: Powering AI Agents & Assistants with RAG" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         <div class="tag">Lightboard · IBM Technology</div>
-        <h3>Content-Aware Storage: Powering AI Agents &amp; Assistants with RAG</h3>
+        <h3>Content-Aware Storage: Powering AI Agents and Assistants with RAG</h3>
         <p>How content-aware storage feeds AI agents and assistants the context they need.</p>
         <a class="more" href="https://www.youtube.com/watch?v=cyMdBK8oEYc">Watch on YouTube →</a>
       </div>
@@ -343,7 +338,7 @@
 </section>
 
 <!-- ============ TECHNICAL FLUENCY ============ -->
-<section id="technical">
+<section id="technical" class="alt">
   <div class="wrap">
     <div class="label">Technical Fluency</div>
     <h2>Technical enough to earn the engineers' trust.</h2>
@@ -351,7 +346,7 @@
     <div class="grid">
       <div class="card">
         <div class="tag">AI infrastructure</div>
-        <h3>Inference, KV cache &amp; AI factories</h3>
+        <h3>Inference, KV cache, and AI factories</h3>
         <p>How persistent KV cache, content-aware storage, high-performance file and object storage, and GPU-accelerated pipelines fit together in large-scale inference and RAG.</p>
       </div>
       <div class="card">
@@ -361,7 +356,7 @@
       </div>
       <div class="card">
         <div class="tag">Science</div>
-        <h3>Physics, astronomy &amp; science journalism</h3>
+        <h3>Physics, astronomy, and science journalism</h3>
         <p>Studied physics and astronomy at the University of Toronto, then covered science and technology for The Globe and Mail — the same instincts I bring to understanding how systems really work.</p>
       </div>
     </div>
@@ -381,10 +376,10 @@
         <div class="astro-img"><img class="zoom" src="Assets/ghost-nebula.jpg" alt="Ghost Nebula Sh2-136" loading="lazy"></div>
         <div class="astro-text">
           <h3>Ghost Nebula — Sh2-136</h3>
-          <p>The Ghost Nebula is a faint, eerie cloud of dust in the constellation Cepheus, about 1,400 light-years away. </p>
+          <p>The Ghost Nebula is a faint, eerie cloud of dust in the constellation Cepheus, about 1,400 light-years away. A fitting subject for October, the Ghost is well placed high in the northern sky on autumn evenings.</p>
           <p>Unlike glowing emission nebulae that produce their own light, the Ghost is a reflection nebula. It contains a few young stars, but they're not hot enough to ionize the surrounding gas. As a result, the Ghost shines by starlight reflected off tiny dust grains, giving it a dim, brownish-gray, smoky appearance. It's captured here through a luminance filter, which records the full range of visible light as shades of gray.</p>
-          <p>The dust grains are made of silicates, carbon, and ice, and are about the size of the particles in cigarette smoke. The Ghost Nebula is a stellar nursery. Within its dense, dark core is a Bok globule, a collapsing pocket of gas and dust where new stars are literally in the process of being born.</p>
-          <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
+          <p>The dust grains are made of silicates, carbon, and ice, and are about the size of the particles in cigarette smoke. Beyond its spooky looks, the Ghost Nebula is scientifically interesting because it's a stellar nursery. Its dense, dark core is a Bok globule, a collapsing pocket of gas and dust where new stars are forming. Longer exposures reveal jets from an embedded protostar — literally a star in the process of being born.</p>
+          <div class="copy">Image and text © 2026 Michael Kieran. All rights reserved.</div>
         </div>
       </article>
 
@@ -393,33 +388,31 @@
         <div class="astro-text">
           <h3>Galaxy Name — Catalog ID</h3> <!-- TODO -->
           <p>Description coming soon.</p> <!-- TODO -->
-          <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
+          <div class="copy">Image and text © 2026 Michael Kieran. All rights reserved.</div>
         </div>
       </article>
 
       <article class="astro-item">
         <div class="astro-img"><img class="zoom" src="Assets/milky-way-core.jpg" alt="The Milky Way core rising over a ridgeline" loading="lazy"></div>
         <div class="astro-text">
-          <h3>The Milky Way Core — Sagittarius &amp; Scorpius</h3> <!-- TODO: confirm title -->
+          <h3>The Milky Way Core — Sagittarius and Scorpius</h3> <!-- TODO: confirm title -->
           <p>Description coming soon.</p> <!-- TODO -->
-          <div class="copy">Image and text © 2026 Michael Kieran — All rights reserved</div>
+          <div class="copy">Image and text © 2026 Michael Kieran. All rights reserved.</div>
         </div>
       </article>
 
-      <!-- ===== TEMPLATE for images 4 and 5: copy everything between the dashed lines,
-           paste it above this comment, and remove the comment markers around it.
-      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      <!-- TEMPLATE for images 4 and 5: copy between the dashed lines, paste above this comment, and remove the comment markers.
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       <article class="astro-item">
         <div class="astro-img"><img class="zoom" src="Assets/FILENAME.jpg" alt="OBJECT NAME" loading="lazy"></div>
         <div class="astro-text">
           <h3>Object Name — Catalog ID</h3>
           <p>Paragraph 1</p>
           <p>Paragraph 2</p>
-          <p>Paragraph 3</p>
-          <div class="copy">Image and text © YEAR Michael Kieran — All rights reserved</div>
+          <div class="copy">Image and text © YEAR Michael Kieran. All rights reserved.</div>
         </div>
       </article>
-      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       -->
 
     </div>
@@ -427,25 +420,22 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact">
+<section id="contact" class="alt">
   <div class="wrap">
-    <div class="contact-box">
-      <div class="label">Contact</div>
-      <h2>Let's talk.</h2>
-      <p class="intro" style="margin-bottom:0">I'm always open to discussing AI infrastructure, enterprise storage, and how to craft compelling narratives that simplify complex technologies.</p>
-      <div class="btns">
-        <a class="btn primary" href="mailto:mkieran@mrkieran.com">mkieran@mrkieran.com</a>
-        <a class="btn" href="https://www.linkedin.com/in/michaelkieran/">LinkedIn</a>
-      </div>
+    <div class="label">Contact</div>
+    <h2>Let's talk.</h2>
+    <p class="intro" style="margin-bottom:0">I'm always glad to talk about AI infrastructure, storage, and the stories that make complex technology make sense — or the night sky.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:mkieran@mrkieran.com">mkieran@mrkieran.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/michaelkieran/">LinkedIn</a>
     </div>
   </div>
 </section>
 
-<footer><div class="wrap">© 2026 Michael Kieran </div></footer>
+<footer><div class="wrap">© 2026 Michael Kieran · Built with GitHub Pages</div></footer>
 
 <div id="lb"><img alt=""></div>
 <script>
-  // Click any image marked "zoom" to view it full-screen; click again or press Esc to close
   const lb=document.getElementById('lb'), lbImg=lb.querySelector('img');
   document.querySelectorAll('img.zoom').forEach(img=>{
     img.addEventListener('click',()=>{lbImg.src=img.src;lbImg.alt=img.alt;lb.style.display='flex';});
